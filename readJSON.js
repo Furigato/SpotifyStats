@@ -4,16 +4,29 @@ const readJSON = async() => {
         objStats = await fetch('/JSON/StreamingHistory0.json')
         .then(response => {
             return response.json()
-          })
-        .then(r => {
-            return r
+            .then(detail => { return detail})
           })
     } catch (e) {
         console.error(e)
     }
 
-    return Object.values(objStats)
+    return objStats
 
 }
 
 console.log(readJSON())
+
+// function timesListened(songName) {
+//     const history = readJSON()
+    
+//     history.forEach(song => {
+//         let playValue = 0
+//         if (songName == trackName) {
+//             playValue++
+//             return playValue
+//         }
+//         console.log(playValue)
+//     });
+// }
+
+// timesListened()
