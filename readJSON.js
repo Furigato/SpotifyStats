@@ -1,20 +1,24 @@
-const readJSON = async() => {
-    let objStats
-    try {
-        objStats = await fetch('/JSON/StreamingHistory0.json')
-        .then(response => {
-            return response.json()
-            .then(detail => { return detail})
-          })
-    } catch (e) {
-        console.error(e)
-    }
+const jsonFile = '/JSON/StreamingHistory0.json';
+import axios from 'axios';
+import { get } from 'axios';
 
-    return objStats
+// const readJSON = (JSON) => {
+//         return fetch(JSON)
+//         .then(response => {
+//           const objStats = response.data
+//           return objStats
+//         }) .catch(error => {
+//           console.error('Algo deu errado')
+//           console.error(error)
+//         })
+// }
 
-}
+// console.log(readJSON(jsonFile))
 
-console.log(readJSON())
+get(jsonFile).then(response => {
+  const objStats = response.data
+  console.log(objStats)
+})
 
 // function timesListened(songName) {
 //     const history = readJSON()

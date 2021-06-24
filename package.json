@@ -1,0 +1,31 @@
+{
+  "name": "spotifystats",
+  "version": "1.0.0",
+  "description": "spotify statistics by JSON History",
+  "main": "readJSON.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Furigato/SpotifyStats.git"
+  },
+  "keywords": [
+    "statistics",
+    "stats",
+    "spotify",
+    "JSON"
+  ],
+  "author": "Rafael Furigato Fogaça",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Furigato/SpotifyStats/issues"
+  },
+  "homepage": "https://github.com/Furigato/SpotifyStats#readme"
+}
